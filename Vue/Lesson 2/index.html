@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-            <meta content="width=device-width, initial-scale=1" name="viewport">
-                <title>
-                    Lesson 2
-                </title>
-                <!-- Vue 3 -->
-                <script src="https://unpkg.com/vue@3/dist/vue.global.js">
-                </script>
-                <!-- Tailwind -->
-                <script src="https://cdn.tailwindcss.com">
-                </script>
-            </meta>
-        </meta>
-    </head>
-    <body class="bg-orange-200">
-        <div class="max-w-2xl mx-auto bg-orange-500 mt-28 rounded-full" id="app">
-            <div class="py-9">
-                <p class="text-black font-extrabold text-3xl text-center">
-                    Lesson
-                    <span class="text-white">
-                        {{ lesson }}
-                    </span>
-                </p>
-                <p class="text-black font-extrabold text-1xl text-center mt-5">
-                    Author
-                    <span class="text-white">
-                        {{ author }}
-                    </span>
-                </p>
-                <p class="text-black font-extrabold text-1xl text-center mt-5">
-                    Title
-                    <span class="text-white">
-                        {{ title }}
-                    </span>
-                </p>
-                <!-- <div class="bg-orange-800 rounded-full shadow-2xl max-w-md mx-auto mt-7 text-md font-bold">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>
+        Lesson 2
+    </title>
+    <!-- Vue 3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js">
+    </script>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com">
+    </script><!-- Vue 3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js">
+    </script>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+</head>
+
+<body class="bg-orange-200">
+    <div class="max-w-2xl mx-auto bg-orange-500 mt-28 rounded-full" id="app">
+        <div class="py-9">
+            <p class="text-black font-extrabold text-3xl text-center">
+                Lesson
+                <span class="text-white">
+                    {{ lesson }}
+                </span>
+            </p>
+            <p class="text-black font-extrabold text-1xl text-center mt-5">
+                Author
+                <span class="text-white">
+                    {{ author }}
+                </span>
+            </p>
+            <p class="text-black font-extrabold text-1xl text-center mt-5">
+                Title
+                <span class="text-white">
+                    {{ title }}
+                </span>
+            </p>
+            <!-- <div class="bg-orange-800 rounded-full shadow-2xl max-w-md mx-auto mt-7 text-md font-bold">
                     <div class="flex flex-row py-4 px-3 items-center">
                         <button class="basis-1/2 border px-2 py-1 rounded-full shadow-2xl hover:bg-orange-500 hover:text-white" v-on:click="increase">
                             Increase
@@ -49,22 +54,27 @@
                         </button>
                     </div>
                 </div> -->
-                <div class="bg-orange-800 rounded-full shadow-2xl max-w-md mx-auto mt-7 text-md font-bold">
-                    <div class="flex flex-row py-4 px-3 items-center">
-                        <button class="basis-1/2 border px-2 py-1 rounded-full shadow-2xl hover:bg-orange-500 hover:text-white" v-on:click="number++">
-                            Increase
-                        </button>
-                        <p class="basis-1/2 text-center font-extrabold text-white text-3xl">
-                            {{ number }}
-                        </p>
-                        <button class="basis-1/2 border px-2 py-1 rounded-full shadow-2xl hover:bg-orange-500 hover:text-white" v-on:click="number--">
-                            Decrease
-                        </button>
-                    </div>
+            <div class="bg-orange-800 rounded-full shadow-2xl max-w-md mx-auto mt-7 text-md font-bold">
+                <div class="flex flex-row py-4 px-3 items-center">
+                    <button
+                        class="basis-1/2 border px-2 py-1 rounded-full shadow-2xl hover:bg-orange-500 hover:text-white"
+                        v-on:click="number++">
+                        Increase
+                    </button>
+                    <p class="basis-1/2 text-center font-extrabold text-white text-3xl">
+                        {{ number }}
+                    </p>
+                    <button
+                        class="basis-1/2 border px-2 py-1 rounded-full shadow-2xl hover:bg-orange-500 hover:text-white"
+                        v-on:click="number--">
+                        Decrease
+                    </button>
                 </div>
             </div>
         </div>
-        <script src="./main.js" type="text/javascript">
-        </script>
-    </body>
+    </div>
+    <script src="./main.js" type="text/javascript">
+    </script>
+</body>
+
 </html>
