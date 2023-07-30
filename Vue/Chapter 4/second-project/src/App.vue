@@ -1,13 +1,22 @@
 <template>
-    <h1 class="title" ref="title">{{books[0].title}}</h1>
+    <div>
+        <h1 class="title" ref="title">{{books[0].title}}</h1>
 
-    <section class="form">
-        <input type="text" ref="name" placeholder="Enter Your Name">
-        <button @click="clickHandler">Click</button>
-    </section>
+        <section class="form">
+            <input type="text" ref="name" placeholder="Enter Your Name">
+            <button @click="clickHandler">Click</button>
+        </section>
+
+        <article class="modal">
+            <button @click="showModalClick">Show</button>
+        </article>
+
+        <ModalComponent v-if="showModal" title="Go to Homepage" :book="books[2].title" theme="success"/>
+    </div>
 </template>
 
 <script>
+import ModalComponent from "./components/ModalComponent.vue";
 export default {
     data() {
         return {
@@ -38,26 +47,44 @@ export default {
                 }
             ],
             showBook: true,
-            link: "https://www.google.com/"
+            link: "https://www.google.com/",
+            showModal: false
         }
     },
     methods: {
         clickHandler() {
-            // console.log(this.$refs.name);
             this.$refs.name.focus();
-            this.$refs.title.textContent = this.books[2].title;
+            this.$refs.title.textContent = this.books[1].title;
+        },
+        showModalClick() {
+            this.showModal = !this.showModal;
         }
+    },
+    components: {
+        ModalComponent
     }
 }
 </script>
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        box-sizing: border-box;
-        text-decoration: none;
+<style scoped>
+    .modal {
+        width: 89px;
+        height: 98px;
+        border: 1px solid #FC0;
+        box-shadow: 10px 10px 5px gray;
+        border-radius: 20px;
+
+        position: absolute;
+        right: 60px;
+        top: 45%;
+    }
+
+    .modal button {
+        padding: 4px 8px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1.3rem;
+        border: none;
+        margin: 40% 10px;
     }
 
     .title {
