@@ -8,10 +8,10 @@
         </section>
 
         <article class="modal">
-            <button @click="showModalClick">Show</button>
+            <button @click="showModal=true">Show</button>
         </article>
 
-        <ModalComponent v-if="showModal" title="Go to Homepage" :book="books[2].title" theme="success"/>
+        <ModalComponent v-if="showModal" title="Go to Homepage" :book="books[2].title" theme="success" @close="showModal=!showModal"/>
     </div>
 </template>
 
@@ -55,9 +55,6 @@ export default {
         clickHandler() {
             this.$refs.name.focus();
             this.$refs.title.textContent = this.books[1].title;
-        },
-        showModalClick() {
-            this.showModal = !this.showModal;
         }
     },
     components: {

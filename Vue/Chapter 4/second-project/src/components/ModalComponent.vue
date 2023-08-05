@@ -1,5 +1,5 @@
 <template>
-    <div class="drop" @click="closeModel">
+    <div class="drop" @click.self="closeModel">
         <a href="https://www.google.com/" class="link">{{title}}</a>
         <section :class="{success:theme==='success'}">
             <p>{{book}}</p>
@@ -12,7 +12,7 @@ export default {
     props: ['title','book','theme'],
     methods: {
         closeModel() {
-            
+            this.$emit("close");
         }
     }
 }
